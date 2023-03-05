@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  max-width: 1520px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 154px;
+}
+.navbar .menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.navbar .menu a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-decoration: none;
+  padding: 13px 10px;
+  border-bottom: 1px solid transparent;
+}
+.navbar .menu a:hover {
+  border-bottom: 1px solid #ed165f;
+  color: #ed165f;
+}
+.active {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #ed165f;
+}
+.navbar .search_account {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.navbar .search_account .search {
+  display: flex;
+  align-items: center;
+}
+.navbar .search_account .search input {
+  border: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 4px 0;
+  outline: none;
+  width: 175px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+.navbar .search_account .search i {
+  font-size: 20px;
+  font-weight: 900;
+}
+.navbar .search_account .account_icon,
+.navbar .search_account .cart_icon,
+.navbar .search_account .like_icon {
+  font-size: 20px;
+}
+
+/* ==========              Header (start)        ============ */
+.header {
+  width: 100%;
+  background: #ed165f;
+  /* height: 87.9vh; */
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+.header .slider .sliderItem .headerPhoto {
+  position: relative;
+}
+.header .slider .sliderItem .headerPhoto .headerGirl {
+  z-index: 3;
+  position: relative;
+  left: 30%;
+}
+.header .slider .sliderItem .headerPhoto .header_bgr {
+  position: absolute;
+  top: 10%;
+  left: 13%;
+}
+
+/* .header .headerPhoto{
+}
+.header .headerBgr{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+} */
+
+.shopYourStyle {
+  padding: 60px 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.shopYourStyle .shopYourStyle_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.shopYourStyle .shopYourStyle_title h2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+.shopYourStyle .shopYourStyle_title p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #000000;
+  width: 76.1%;
+}
+.shopYourStyle .shopYourStyle_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: 0.3s ease-in-out;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card:hover {
+  box-shadow: 1px 0px 10px 3px rgba(105, 102, 102, 0.308);
+  transform: scale(1.03);
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card figure .card_hover {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 13px;
+  transition: 1s ease-in-out;
+  opacity: 0;
+  user-select: none;
+}
+.shopYourStyle
+  .shopYourStyle_content
+  .shopYourStyle_card
+  figure:hover
+  .card_hover {
+  display: flex;
+  opacity: 1;
+}
+.shopYourStyle
+  .shopYourStyle_content
+  .shopYourStyle_card
+  .card_hover
+  .card_like {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shopYourStyle
+  .shopYourStyle_content
+  .shopYourStyle_card
+  .card_hover
+  .card_like
+  i {
+  color: #ed165f;
+  padding: 6px 10px;
+  font-size: 24px;
+}
+.shopYourStyle
+  .shopYourStyle_content
+  .shopYourStyle_card
+  .card_hover
+  .card_cart {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+.shopYourStyle
+  .shopYourStyle_content
+  .shopYourStyle_card
+  .card_hover
+  .card_cart
+  i {
+  color: #ed165f;
+  padding: 6px 10px;
+  font-size: 24px;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card figure {
+  width: 297px;
+  height: 457px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card .homeCard_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  gap: 16px;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card .homeCard_content h6 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.shopYourStyle .shopYourStyle_content .shopYourStyle_card .homeCard_content h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.shoes .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.shoes .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.shoes .cards .card img {
+  width: 400px;
+  height: 400px;
+}
+
+/* ==================           FOOTER (start)                 ===================*/
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 80px; */
+  padding: 60px;
+  background-color: #f5f5f5;
+}
+.footer .footer_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footer_menu a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 8px;
+  /* text-align: center; */
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-decoration: none;
+}
+.footer .footer_icons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footer_icons div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.footer .footer_icons div i {
+  color: #ed165f;
+  font-size: 20px;
+}
+.footer .footer_icons div p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.footer .footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.footer .footer_subscribe p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 8px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.footer .footer_subscribe .subscribeInput_box {
+  display: flex;
+  border: 1px solid #ed165f;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.footer .footer_subscribe .subscribeInput_box input {
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+}
+.footer .footer_subscribe .subscribeInput_box button {
+  border: none;
+  background-color: #ed165f;
+  color: #ffffff;
+  padding: 16px 24px;
+}
+.footer .footer_address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer .footer_address p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
