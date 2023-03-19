@@ -14,6 +14,8 @@ export let Navbar = ({ changeInput }) => {
         <NavLink to="/clothes">Clothes</NavLink>
         <NavLink to="/shoes">Shoes</NavLink>
         <NavLink to="/accessories">Accessories</NavLink>
+        <NavLink to="/localStorage">Local Storage Test</NavLink>
+        <NavLink to="/admin">Admin</NavLink>
       </ul>
       <div className="logo">
         <img src={Logo} alt="Logo" />
