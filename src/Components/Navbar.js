@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import PersonIcon from "@mui/icons-material/Person";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
-import { useState } from "react";
+// import { useState } from "react";
 export let Navbar = ({ changeInput }) => {
   // let [search, setSearch]= useState("")
   return (
@@ -14,8 +14,7 @@ export let Navbar = ({ changeInput }) => {
         <NavLink to="/clothes">Clothes</NavLink>
         <NavLink to="/shoes">Shoes</NavLink>
         <NavLink to="/accessories">Accessories</NavLink>
-        <NavLink to="/localStorage">Local Storage Test</NavLink>
-        <NavLink to="/admin">Admin</NavLink>
+        
       </ul>
       <div className="logo">
         <img src={Logo} alt="Logo" />
@@ -33,10 +32,10 @@ export let Navbar = ({ changeInput }) => {
           </i>
         </div>
         <div className="cart_icon">
-          <FaShoppingCart />
+          <NavLink to="/cart"><FaShoppingCart /></NavLink>
         </div>
         <div className="like_icon">
-          <AiFillHeart />
+          <NavLink to="/like"><AiFillHeart /></NavLink>
         </div>
       </div>
     </div>

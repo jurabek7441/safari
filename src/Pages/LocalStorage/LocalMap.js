@@ -4,16 +4,19 @@ import { DataContext } from "../../Components/Context";
 export let LocalMap = () => {
   let { localData, deleteFunc, editFunc } = useContext(DataContext);
   return (
-    <div className="localmap">
+    <div className="localMap">
       <table border={1}>
         <thead>
           <tr>
-            <th>№</th>
+            <th>id</th>
             <th>name</th>
-            <th>surname</th>
-            <th>email</th>
-            <th>password</th>
-            <th>img</th>
+            <th>price</th>
+            <th>category</th>
+            <th>color</th>
+            <th>size</th>
+            <th>photo</th>
+            <th>count</th>
+            <th>discount</th>
             <th>action</th>
           </tr>
         </thead>
@@ -22,14 +25,18 @@ export let LocalMap = () => {
             localData.length > 0 ? (
               localData.map((item, index) => (
                 <tr key={item.id}>
-                  <td>{index + 1}</td>
+                  <td>{item.id}</td>
                   <td>{item?.name}</td>
-                  <td>{item?.surname}</td>
-                  <td>{item?.email}</td>
-                  <td>{item?.password}</td>
+                  <td>{item?.price}</td>
+                  <td>{item?.category}</td>
+                  <td>{item?.color}</td>
+                  <td>{item?.size}</td>
                   <td>
-                    <img src={item?.rasm} alt={item?.name} />
+                    <img src={item?.photo} alt={item?.name} />
                   </td>
+                  <td>{item?.count}</td>
+                  <td>{item?.discount}</td>
+
                   <td>
                     <button
                       onClick={() => editFunc(item)}
@@ -44,12 +51,12 @@ export let LocalMap = () => {
                   </td>
                 </tr>
               ))
-            ):(
+            ) : (
               <tr>
                 <td colSpan={10}>No data...</td>
               </tr>
             )
-         }
+          }
         </tbody>
       </table>
     </div>

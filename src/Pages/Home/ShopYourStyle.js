@@ -2,11 +2,14 @@ import { useContext, useEffect } from "react";
 import { DataContext } from "../../Components/Context";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdAddShoppingCart } from "react-icons/md";
+import { FcLike } from "react-icons/fc";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export let ShopYourStyle = ({ state }) => {
-  const { shopData } = useContext(DataContext);
+  const { shopData, likeFunc, addCartFunc } = useContext(DataContext);
+  // likeFunc();
 
   useEffect(() => {
     AOS.init();
@@ -29,16 +32,16 @@ export let ShopYourStyle = ({ state }) => {
       </div>
       <div className="shopYourStyle_content">
         {shopData.length > 0 &&
-        shopData.filter((obj) => {
-          if (state === "") {
-            return obj;
-          } else if (
-            obj.name.toLowerCase().includes(state.toLowerCase().trim()) ||
-            obj.price.toString().includes(state.toLowerCase().trim())
-          ) {
-            return obj;
-          }
-        }).length > 0 ? (
+          shopData.filter((obj) => {
+            if (state === "") {
+              return obj;
+            } else if (
+              obj.name.toLowerCase().includes(state.toLowerCase().trim()) ||
+              obj.price.toString().includes(state.toLowerCase().trim())
+            ) {
+              return obj;
+            }
+          }).length > 0 ? (
           shopData
             .filter((obj) => {
               if (state === "") {
@@ -59,12 +62,15 @@ export let ShopYourStyle = ({ state }) => {
                 <figure>
                   <img src={item.photo} alt={item.name} />
                   <div className="card_hover">
-                    <div className="card_like">
+                    <div className="card_like" onClick={() => likeFunc(item)}>
                       <i>
-                        <AiOutlineHeart />
+                        {item.like ? <FcLike /> : <AiOutlineHeart />}
                       </i>
                     </div>
-                    <div className="card_cart">
+                    <div className="card_cart"
+                    onClick={()=> addCartFunc(item)}
+                    
+                    >
                       <p>ADD TO CART</p>
                       <i>
                         <MdAddShoppingCart />

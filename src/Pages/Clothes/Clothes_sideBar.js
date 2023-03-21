@@ -4,7 +4,7 @@ import { DataContext } from "../../Components/Context";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
-export let SideBar = (value, setValue ) => {
+export let SideBar = (value, setValue) => {
   let {
     setCategoryState,
     categoryBtn,
@@ -13,14 +13,13 @@ export let SideBar = (value, setValue ) => {
     sizeBtn,
     setSizeState,
   } = useContext(DataContext);
-  let [btnBoolean, setBtnBoolean] = useState(false);
-  const handleChange = (event, newValue)=>{
+  const handleChange = (event, newValue) => {
     setValue(newValue)
   }
-
-  // let handleBtn = () => {
-  //   setBtnBoolean(!btnBoolean);
-  // };
+  let [btnBoolean, setBtnBoolean] = useState(false);
+  let handleBtn = () => {
+    setBtnBoolean(!btnBoolean);
+  };
   return (
     <div className="sideBar">
       <div className="category">
@@ -55,8 +54,9 @@ export let SideBar = (value, setValue ) => {
         <div className="sizeItem">
           {sizeBtn.map((size, index) => (
             <button
+              
               key={index}
-              className={btnBoolean ? "sizeBtn" : "sizeBtnAct"}
+              className={btnBoolean ? "btnActive" : ""}
               onClick={() => { setSizeState(size) }}
             >
               {size}
@@ -97,7 +97,7 @@ export let SideBar = (value, setValue ) => {
       <div className="price">
         <Box sx={{ width: 300 }}>
           <Slider
-            getAriaLabel={()=> "temperature range"}
+            getAriaLabel={() => "temperature range"}
             value={value}
             onchange={handleChange}
             valueLabelDisplay="auto"

@@ -100,6 +100,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; */
+    padding-top: 60px;
 }
 .header .slider .sliderItem .headerPhoto {
   position: relative;
@@ -275,9 +276,11 @@
   padding: 180px 50px;
   gap: 50px;
 }
-.clothesContent {
+.clothesContent,
+.shoesContent {
   display: flex;
   gap: 49px;
+  align-items: flex-start;
 }
 .clothes h2 {
   font-family: "Mulish";
@@ -289,20 +292,20 @@
   color: #000000;
 }
 
-.clothes .sideBar {
+.sideBar {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  width: 23%;
+  width: 20%;
 }
 
-.clothes .sideBar .category,
-.clothes .sideBar .size {
+.sideBar .category,
+.sideBar .size {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.clothes .sideBar .category h3 {
+.sideBar .category h3 {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 600;
@@ -312,7 +315,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 16px;
 }
-.clothes .sideBar .category .categoryItem {
+.sideBar .category .categoryItem {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -322,15 +325,16 @@
   font-size: 16px;
   line-height: 18px;
   color: #686868;
+  cursor: pointer;
 }
-.clothes .sideBar .size .sizeTitle,
-.clothes .sideBar .color .color_title {
+.sideBar .size .sizeTitle,
+.sideBar .color .color_title {
   display: flex;
   justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-.clothes .sideBar .clear {
+.sideBar .clear {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -340,17 +344,18 @@
   font-size: 14px;
   line-height: 18px;
   color: #c4c4c4;
+  cursor: pointer;
 }
-.clothes .sideBar .clear i:nth-child(n + 2) {
+.sideBar .clear i:nth-child(n + 2) {
   font-size: 18px;
   line-height: 5px;
 }
-.clothes .sideBar .size .sizeItem {
+.sideBar .size .sizeItem {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 16px;
 }
-.clothes .sideBar .size .sizeItem button {
+.sideBar .size .sizeItem button {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 2px;
@@ -362,27 +367,34 @@
   line-height: 18px;
   /* identical to box height, or 129% */
   color: #000000;
+  cursor: pointer;
 }
-.clothes .sideBar .color {
+.sideBar .size .sizeItem .btnActive{
+  background-color: #ed165f;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+.sideBar .color {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.clothes .sideBar .color .colors {
+.sideBar .color .colors {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 16px;
 }
-.clothes .sideBar .color .color_item {
+.sideBar .color .color_item {
   display: flex;
   gap: 7px;
   align-items: center;
 }
-.clothes .sideBar .color .color_item button {
+.sideBar .color .color_item button {
   border: 1px solid #00000009;
   border-radius: 2px;
 }
-.clothes .sideBar .color .color_item p {
+.sideBar .color .color_item p {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
@@ -407,35 +419,37 @@
   display: flex;
 }
 
-
-.shoes{
+/*                            shoes start                           */
+.shoes {
+  padding: 0 50px;
   padding-top: 200px;
-}
-.shoes .cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.shoes .cards .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  overflow: hidden;
+  gap: 64px;
+  /* align-items: flex-start; */
+  padding-bottom: 120px;
 }
-.shoes .cards .card img {
-  width: 400px;
-  height: 400px;
+.shoes h2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 18px;
+  /* identical to box height, or 60% */
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.shoes .sideBar .size .sizeItem button {
+  padding: 7px 10px;
+  font-size: 12px;
 }
 
 /* ==================           FOOTER (start)                 ===================*/
 
 .footer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   /* gap: 80px; */
   padding: 60px;
@@ -526,11 +540,23 @@
   color: #000000;
 }
 
+
+.localPage{
+  padding-top: 130px;
+}
+.localMap{
+  padding-top: 130px;
+}
 .localPage form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+.localPage form div{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .localPage form input {
   padding: 15px 10px;
@@ -550,6 +576,8 @@
 
 .admin {
   display: flex;
+  min-height: calc(100vh - 230px);
+  padding-top: 92px;
 }
 .admin .adminSidebar {
   display: flex;
@@ -579,4 +607,392 @@
 .admin .adminSidebar a:hover {
   background-color: #9fa2b4;
   color: #dde2ff;
+}
+
+/*               Not Found           */
+
+.notFound {
+  padding: 160px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.notFound h1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 104px;
+  /* identical to box height, or 108% */
+  color: #ed165f;
+}
+.notFound h2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  /* identical to box height, or 108% */
+  color: #222;
+}
+.notFound p {
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 24px;
+  width: 45%;
+  text-align: center;
+}
+.notFound button {
+  padding: 12px 47px;
+  background-color: #ed165f;
+  border: none;
+  border-radius: 6px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 108% */
+  color: #ffffff;
+}
+.notFound button a {
+  text-decoration: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 108% */
+  color: #ffffff;
+}
+
+/* like  */
+
+.like {
+  padding: 0 100px;
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: start;
+  gap: 42px;
+  min-height: 100vh;
+}
+.like .likeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 31px;
+}
+.like .likeCard .likeCard_content {
+  display: flex;
+  gap: 32px;
+}
+.like .likeCard .likeCard_content figure {
+  width: 86.85px;
+  height: 86.85px;
+}
+.like .likeCard .likeCard_content figure img {
+  width: 100%;
+  height: 100%;
+}
+.like .likeCard .likeCard_content .likeCard_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.like .likeCard .likeCard_content .likeCard_info h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.like .likeCard .likeCard_content .likeCard_info h6 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.2px;
+
+  color: #686868;
+}
+.like .likeCard .likeCard_content .likeCard_info p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ed165f;
+}
+.like .likeCard .likeCard_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like .likeCard .likeCard_actions .buyNow {
+  padding: 12px 33px;
+  background: #ed165f;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  /* UI/Background */
+
+  color: #ffffff;
+}
+.like .likeCard .likeCard_actions .remove {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 33px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.2px;
+
+  color: #ed165f;
+}
+
+/* cart===================================================== */
+
+.cart {
+  padding: 0 100px;
+  padding-top: 150px;
+  min-height: calc(100vh - 230px);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.cart > h2 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 18px;
+  /* identical to box height, or 75% */
+
+  letter-spacing: 0.2px;
+
+  color: #000000;
+}
+.cart .cartContent {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 32px;
+}
+.cart .cartCard {
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 34px 31px;
+}
+.cart .cartCard .cartCard_content {
+  display: flex;
+  gap: 32px;
+  width: 50%;
+  border-right: 1.5px solid #e1e1e1;
+}
+.cart .cartCard .cartCard_content figure {
+  width: 86.85px;
+  height: 86.85px;
+}
+.cart .cartCard .cartCard_content figure img {
+  width: 100%;
+  height: 100%;
+}
+.cart .cartCard .cartCard_content .cartCard_info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cart .cartCard .cartCard_content .cartCard_info h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  /* identical to box height, or 90% */
+
+  letter-spacing: 0.2px;
+
+  color: #000000;
+}
+.cart .cartCard .cartCard_content .cartCard_info h6 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.2px;
+
+  color: #686868;
+}
+.cart .cartCard .cartCard_content .cartCard_info .cartCard_actions {
+  display: flex;
+  gap: 60px;
+}
+.cart .cartCard .cartCard_content .cartCard_info .cartCard_actions button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.2px;
+
+  color: #ed165f;
+}
+.cart .cartCard .cart_priceCount {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart .cartCard .cart_priceCount > div {
+  padding: 0 70px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  border-right: 1.5px solid #e1e1e1;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+.cart .cartCard .cart_priceCount > div:last-child {
+  border: none;
+}
+.cart .cartCard .cart_priceCount > div button {
+  background: #ed165f;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.cart .cartCard .cart_priceCount > div span {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.cart .cartCheck {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-direction: column;
+}
+.cart .cartCheck h1 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+.cart .cartCheck p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.2px;
+
+  color: #686868;
+}
+.cart .cartCheck .cartButton_box {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  padding: 46px 0;
+}
+.cart .cartCheck .cartButton_box .continueShopping {
+  padding: 12px 28px;
+  border: 1px solid #ed165f;
+  border-radius: 6px;
+  background-color: transparent;
+  outline: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.cart .cartCheck .cartButton_box .toCheck {
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #ed165f;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  /* UI/Background */
+
+  color: #ffffff;
 }

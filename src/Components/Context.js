@@ -10,6 +10,17 @@ import MoonAndStar from "../photo/moonAndStar.png";
 import NerdyOval from "../photo/nerdyOval.png";
 import SupergaPlaid from "../photo/supergaPlaid.png";
 import TambourinCrossbody from "../photo/tambourinCrossbody.png";
+import KedsSneakers from "../photo/kedsSneakers.png";
+import SummerShoes from "../photo/summerShoes.png";
+import CasualFlat from "../photo/casualFlat.png";
+import BlackStrappy from "../photo/blackStrappy.png";
+import SupergaPlatform from "../photo/supergaPlatform.png";
+import HeeledSandals from "../photo/heeledSandals.png";
+import HajinkBoat from "../photo/hajinkBoat.png";
+import CasualFlatSandals from "../photo/casualFlatSandals.png";
+import SummerCork from "../photo/summerCork.png";
+import AnkleBoots from "../photo/ankleBoots.png";
+
 import { useNavigate } from "react-router-dom";
 
 export const DataContext = React.createContext();
@@ -24,7 +35,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "denim",
       color: "black",
-      size: 23,
+      size: "23",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 2,
@@ -33,7 +48,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "jeans",
       color: "white",
-      size: 24,
+      size: "24",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 3,
@@ -42,7 +61,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "jumpsuits",
       color: "red",
-      size: 25,
+      size: "25",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 4,
@@ -51,7 +74,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "tops",
       color: "green",
-      size: 26,
+      size: "26",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
 
     },
     {
@@ -61,7 +88,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "jackets and coats",
       color: "black",
-      size: 27,
+      size: "27",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
 
     },
     {
@@ -71,8 +102,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "pants",
       color: "white",
-      size: 28,
-
+      size: "28",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 7,
@@ -81,8 +115,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "shorts",
       color: "black",
-      size: 29,
-
+      size: "29",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 8,
@@ -91,8 +128,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "skirts",
       color: "red",
-      size: 30,
-
+      size: "30",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 9,
@@ -101,8 +141,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "loungerie & underwear",
       color: "green",
-      size: 31,
-
+      size: "31",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 10,
@@ -111,8 +154,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "leather",
       color: "white",
-      size: 32,
-      
+      size: "32",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 11,
@@ -121,8 +167,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "sweatrs & knits",
       color: "black",
-      size: 40,
-
+      size: "40",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 12,
@@ -131,8 +180,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "denim",
       color: "red",
-      size: 50,
-
+      size: "50",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 13,
@@ -141,8 +193,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "jens",
       color: "white",
-      size: 60,
-
+      size: "60",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 14,
@@ -151,8 +206,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "dressess",
       color: "black",
-      size: 70,
-
+      size: "70",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 15,
@@ -161,8 +219,11 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "tops",
       color: "red",
-      size: 80,
-
+      size: "80",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
     {
       id: 16,
@@ -171,41 +232,227 @@ export default function ContextProvider({ children }) {
       price: 10,
       category: "pants",
       color: "green",
-      size: 90,
-      
+      size: "90",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
     },
   ]);
+
+
+
+
+
+  //shoes data
+  let [shoesData, setShoesData] = useState([
+    {
+      id: 211,
+      photo: HighHeels,
+      name: "High heels ladies shoes",
+      price: 10,
+      category: "booties",
+      color: "black",
+      size: "35.5/5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 212,
+      photo: KedsSneakers,
+      name: "Keds sneakers",
+      price: 10,
+      category: "flats",
+      color: "white",
+      size: "36.5/5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 213,
+      photo: GuilhermineEmbellished,
+      name: "Guilhermina Embellished Slides",
+      price: 10,
+      category: "boots",
+      color: "red",
+      size: "37.5/6.5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 214,
+      photo: SummerShoes,
+      name: "Summer shoes",
+      price: 10,
+      category: "sandals",
+      color: "green",
+      size: "38/7",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+
+    },
+    {
+      id: 215,
+      photo: CasualFlat,
+      name: "Casual Flat Loafers",
+      price: 10,
+      category: "sneakers",
+      color: "black",
+      size: "39/7.5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 216,
+      photo: BlackStrappy,
+      name: "Black strappy peeptoe",
+      price: 10,
+      category: "slides & slippers",
+      color: "white",
+      size: "39.5/8",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 217,
+      photo: SupergaPlatform,
+      name: "Superga Platform Sneakers ",
+      price: 10,
+      category: "heels",
+      color: "black",
+      size: "40/7.5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 218,
+      photo: HeeledSandals,
+      name: "Heeled sandals",
+      price: 10,
+      category: "wedges",
+      color: "red",
+      size: "41/9.5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 219,
+      photo: HajinkBoat,
+      name: "HAJINK Boat Shoes",
+      price: 10,
+      category: "mules",
+      color: "green",
+      size: "41.5/10",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 2110,
+      photo: CasualFlatSandals,
+      name: "Casual Flat Sandals",
+      price: 10,
+      category: "party shoes",
+      color: "white",
+      size: "42/10.5",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 2111,
+      photo: SummerCork,
+      name: "Summer Cork Slippers",
+      price: 10,
+      category: "vegan shoes",
+      color: "black",
+      size: "42/11",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+    {
+      id: 2112,
+      photo: AnkleBoots,
+      name: "Ankle boots",
+      price: 10,
+      category: "oxfords",
+      color: "green",
+      size: "43/12",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: 0,
+    },
+  ]);
+
+  //              data
+
+
+
+
 
   // local Storage
 
   const [localData, setLocalData] = useState(
-    JSON.parse(localStorage.getItem("localUser")) || []
+    JSON.parse(localStorage.getItem("localUser")) || shopData
   );
 
   let portalMap = useNavigate();
   let portalData = useNavigate();
 
   function localRefresh() {
-    setLocalData(JSON.parse(localStorage.getItem("localUser")) || []);
+    setLocalData(JSON.parse(localStorage.getItem("localUser")) || []
+    );
   }
+
 
   const [inputData, setInputData] = useState({
     id: "",
+    photo: "",
     name: "",
-    surname: "",
-    email: "",
-    password: "",
-    rasm: "",
+    price: "",
+    category: "",
+    color: "",
+    size: "",
+    like: false,
+    cart: false,
+    count: 0,
+    discount: "",
   });
 
   function inputClear() {
     setInputData({
       id: "",
+      photo: "",
       name: "",
-      surname: "",
-      email: "",
-      password: "",
-      rasm: "",
+      price: "",
+      category: "",
+      color: "",
+      size: "",
+      like: false,
+      cart: false,
+      count: 0,
+      discount: "",
     });
   }
 
@@ -217,12 +464,12 @@ export default function ContextProvider({ children }) {
     });
   };
 
-  //   let getFileData = (e) =>{
-  //        setInputData({
-  //         ...inputData,
-  //         rasm: URL.createObjectURL(e.target.files[0]),
-  //        });
-  //   };
+    let getFileData = (e) =>{
+         setInputData({
+          ...inputData,
+          rasm: URL.createObjectURL(e.target.files[0]),
+         });
+    };
 
   let sendData = () => {
     if (inputData.id === "") {
@@ -267,9 +514,57 @@ export default function ContextProvider({ children }) {
 
   let editFunc = (item) => {
     setInputData(item);
-    portalMap("/localStorage");
+    portalMap("/adminClothes");
   };
 
+
+  // likeFunc
+
+  let likeFunc = (item) => {
+    setShopData(
+      shopData.map((element) =>
+        element.id === item.id ? { ...element, like: !element.like } : element)
+    );
+  }
+
+  // add to cart
+
+  let addCartFunc = (item) => {
+    setShopData(
+      shopData.map((element) =>
+        element.id === item.id ? { ...element, cart: !element.cart } : element)
+    );
+  }
+
+  // plusFunc
+
+  let plusFunc = (item) => {
+    setShopData(
+      shopData.map((obj) =>
+        obj.id === item.id && obj.count < 10
+          ? { ...obj, count: obj.count + 1 }
+          : obj
+      )
+    );
+  };
+  // minus Func
+  let minusFunc = (item) => {
+    if (item.count > 0) {
+      setShopData(
+        shopData.map((obj) =>
+          obj.id === item.id ? { ...obj, count: obj.count - 1 } : obj
+        )
+      );
+    } else {
+      alert("error");
+    }
+  };
+
+  // delete Func
+
+  // let deleteFunc = (item)=>{
+
+  // }
   // filter & category
 
   let [categoryState, setCategoryState] = useState('');
@@ -292,6 +587,21 @@ export default function ContextProvider({ children }) {
     "Leather",
     "Sweatrs & knits",
   ];
+  let shoesCategoryBtn = [
+    "",
+    "Booties",
+    "Flats",
+    "Boots",
+    "Sandals",
+    "Sneakers",
+    "Slides & Slippers",
+    "Heels",
+    "Wedges",
+    "Mules",
+    "Party shoes",
+    "Vegan shoes",
+    "Oxfords",
+  ]
   let colorBtn = [
     "beige",
     "blue",
@@ -316,13 +626,27 @@ export default function ContextProvider({ children }) {
     29,
     30,
     31,
-    32, 
+    32,
     40,
     50,
     60,
     70,
     80,
     90,
+  ]
+  let shoesSizeBtn = [
+    "35.5/5",
+    "36.5/5.5",
+    "37.5/6.5",
+    "38/7",
+    "39/7.5",
+    "39.5/8",
+    "40/7.5",
+    "41/9.5",
+    "41.5/10",
+    "42/10.5",
+    "42/11",
+    "43/12",
   ]
   return (
     <DataContext.Provider
@@ -334,6 +658,7 @@ export default function ContextProvider({ children }) {
         deleteFunc,
         editFunc,
         shopData,
+        setShopData,
         categoryState,
         setCategoryState,
         colorState,
@@ -343,6 +668,14 @@ export default function ContextProvider({ children }) {
         sizeBtn,
         sizeState,
         setSizeState,
+        shoesCategoryBtn,
+        shoesSizeBtn,
+        shoesData,
+        likeFunc,
+        addCartFunc,
+        plusFunc,
+        minusFunc,
+        getFileData
       }}
     >
       {children}
